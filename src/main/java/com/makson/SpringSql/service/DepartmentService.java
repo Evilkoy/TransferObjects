@@ -19,4 +19,13 @@ public class DepartmentService {
     public List<Department> getDepartments() {
         return departmentRepository.findAll();
     }
+
+    public void deleteDepartment(Long id) {
+        departmentRepository.deleteById(id);
+    }
+
+    public void patchDepartment(Long id, Department department) {
+        department.setId(id);
+        departmentRepository.save(department);
+    }
 }
