@@ -13,11 +13,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class Mapper {
     @Autowired
-    ProfessorRepository professorRepository;
+    private ProfessorRepository professorRepository;
     @Autowired
-    DepartmentRepository departmentRepository;
+    private DepartmentRepository departmentRepository;
     @Autowired
-    ScientificDegreeRepository scientificDegreeRepository;
+    private ScientificDegreeRepository scientificDegreeRepository;
 
     public ProfessorDto professorToDto(Professor entity) {
         ProfessorDto dto = new ProfessorDto();
