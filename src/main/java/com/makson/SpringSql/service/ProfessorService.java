@@ -19,4 +19,13 @@ public class ProfessorService {
     public List<Professor> getProfessors() {
         return professorRepository.findAll();
     }
+
+    public void deleteProfessor(Long id) {
+        professorRepository.deleteById(id);
+    }
+
+    public void patchProfessor(Long id, Professor professor) {
+        professor.setId(id);
+        professorRepository.save(professor);
+    }
 }
